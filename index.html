@@ -17,9 +17,9 @@
         d3.json("https://gist.githubusercontent.com/AlexPescud/acb36e1b34344535ade879686415c2c7/raw/b15559e2e01bc87bd906f47a7101da97bf37e053/Land").then(function(data) {
             console.log(data);
             var w = "960"
-        var h = "600"
+            var h = "600"
   
-        console.log("attempt to set up svg");
+            console.log("attempt to set up svg");
   
         var svg = d3.select("body")
               .append("svg")
@@ -33,9 +33,9 @@
           //.attr("opacity", 0.5)
           //.style("fill", "black");
 
-            //console.log("Land features: ", Land.features);
+        console.log("Land features: ", Land.features);
         });
-        
+
       </script>
 </body>
 </html>
