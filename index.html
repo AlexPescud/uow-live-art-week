@@ -27,6 +27,10 @@
           .attr("height", 200);
           //.attr("opacity", 0.5)
           //.style("fill", "black");
+
+        d3.json("/data/Land.geojson", function(data) {
+          console.log(data);
+        });  
   
       </script>
 </body>
