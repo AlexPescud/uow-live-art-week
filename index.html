@@ -28,10 +28,11 @@
           //.attr("opacity", 0.5)
           //.style("fill", "black");
         console.log("attempting to load data")
-        d3.json("http://enjalot.github.io/wwsd/data/world/world-110m.geojson", function(error, Land) {
+        d3.json("/data/Land.geojson", function(error, Land) {
             if (error) console.log(error);
+            console.log("I'm in")
 
-            console.log("Land features: ", Land);
+            //console.log("Land features: ", Land.features);
         });  
   
       </script>
