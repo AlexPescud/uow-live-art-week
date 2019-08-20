@@ -14,7 +14,7 @@
         var w = "960"
         var h = "600"
   
-        //console.log("attempt to set up svg");
+        console.log("attempt to set up svg");
   
         var svg = d3.select("body")
               .append("svg")
@@ -27,7 +27,7 @@
           .attr("height", 200);
           //.attr("opacity", 0.5)
           //.style("fill", "black");
-
+        console.log("attempting to load data")
         d3.json("/data/Land.geojson", function(error, Land) {
             if (error) console.log(error);
 
