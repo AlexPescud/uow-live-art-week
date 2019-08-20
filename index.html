@@ -7,23 +7,23 @@
     <title>D3 ScatterPlot</title>
 </head>
 <body>
-    <div class="scatter-container"></div>
+    <div class="map"></div>
     
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script>
         var width = "960"
         var height = "600"
-        var margin = 10
+        var margin = "10"
 
         d3.json("https://gist.githubusercontent.com/AlexPescud/acb36e1b34344535ade879686415c2c7/raw/b15559e2e01bc87bd906f47a7101da97bf37e053/Land").then(function(data) {
-            console.log(data);
+            //console.log(data);
 
             projection = d3.geoEquirectangular() // geoEquirectangular
               .fitExtent([[margin, margin],[width-margin, height - margin]], data)
 
             pathGenerator = d3.geoPath().projection(projection)
 
-            var svg = d3.select("body")
+            var svg = d3.select("div")
             var g = svg.append("g");   
 
             //Makes circles travel accross entire screen
@@ -42,7 +42,7 @@
             .attr('fill', 'white')
             .style("fill-opacity", 0.8)
 
-        console.log("Land features: ", data.features);
+            console.log("Land features: ", data.features);
         });
 
       </script>
