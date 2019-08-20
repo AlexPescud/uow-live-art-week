@@ -11,9 +11,9 @@
     
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script>
-        var width = "960"
-        var height = "600"
-        var margin = "10"
+        var width = window.innerWidth - 20
+        var height = width / 2
+        var margin = 5
 
         d3.json("https://gist.githubusercontent.com/AlexPescud/acb36e1b34344535ade879686415c2c7/raw/b15559e2e01bc87bd906f47a7101da97bf37e053/Land").then(function(data) {
             //console.log(data);
