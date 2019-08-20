@@ -28,8 +28,10 @@
           //.attr("opacity", 0.5)
           //.style("fill", "black");
 
-        d3.json("/data/Land.geojson", function(data) {
-          console.log(data.features);
+        d3.json("/data/Land.geojson", function(error, Land) {
+            if (error) console.log(error);
+
+            console.log("Land features: ", Land);
         });  
   
       </script>
