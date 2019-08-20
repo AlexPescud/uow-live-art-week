@@ -13,14 +13,10 @@
     <script>
 
         console.log("attempting to load data")
-        d3.json("https://gist.githubusercontent.com/AlexPescud/acb36e1b34344535ade879686415c2c7/raw/b15559e2e01bc87bd906f47a7101da97bf37e053/Land", function(error, Land) {
 
-            // Handle errors getting or parsing the GeoJSON file
-            if (error) { return error; }
-
-            console.log("I'm in with no errors")
-
-        var w = "960"
+        d3.json("https://gist.githubusercontent.com/AlexPescud/acb36e1b34344535ade879686415c2c7/raw/b15559e2e01bc87bd906f47a7101da97bf37e053/Land").then(function(data) {
+            console.log(data);
+            var w = "960"
         var h = "600"
   
         console.log("attempt to set up svg");
@@ -38,8 +34,8 @@
           //.style("fill", "black");
 
             //console.log("Land features: ", Land.features);
-        });  
-  
+        });
+        
       </script>
 </body>
 </html>
